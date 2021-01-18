@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package discovery.config.enforcer;
+package wso2.discovery.config.enforcer;
 
 option go_package = "github.com/envoyproxy/go-control-plane/wso2/discovery/config/enforcer;enforcer";
 option java_package = "org.wso2.gateway.discovery.config.enforcer";
@@ -19,17 +19,7 @@ message EventHub {
   // Generally this is APIM server url
   string serviceUrl = 2;
 
-  // The internal data REST API context.
-  // Ex: "/internal/data/v1/"
-  string internalDataContext = 3;
-
-  // Username of the internal data api.
-  string username = 4;
-
-  // Password of the internal data api.
-  string password = 5;
-
   // Endpoint to be used as the dynamic change detection endpoint
   // Ex: "amqp://admin:admin@carbon/carbon?brokerlist='tcp://localhost:5672'"
-  string listenerEndpoint = 6;
+  string listenerEndpoint = 3;
 }
