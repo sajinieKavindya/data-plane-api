@@ -19,7 +19,6 @@ message EventHub {
   // Generally this is APIM server url
   string serviceUrl = 2;
 
-  // Endpoint to be used as the dynamic change detection endpoint
-  // Ex: "amqp://admin:admin@carbon/carbon?brokerlist='tcp://localhost:5672'"
-  string listenerEndpoint = 3;
+  // Connection parameters for the message listerner
+  map<string, string> jmsConnectionParameters = 3;
 }
